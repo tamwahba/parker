@@ -3,7 +3,8 @@
 #### Pre-run Checklist ####
 - `pip install -r requirements.txt` (assuming pwd is root of this project)
 - `SECRET_KEY` environment variable (large random string)
-- PostgreSQL instance with environments variables:
+- PostGIS (`brew install postgis`) or using instructions at https://postgis.net/install/
+- PostgreSQL instance with environments variables: (required by PostGIS)
   - `DATABASE_NAME`
   - `DATABASE_USER`
   - `DATABASE_PASSWORD`
