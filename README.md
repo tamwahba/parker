@@ -10,3 +10,4 @@
   - `DATABASE_PASSWORD`
   - `DATABASE_HOST` (if ommitted, uses Unix domain sockets)
   - `DATABASE_PORT` (if ommitted, uses PostgreSQL default port)
+- Activate PostGIS plugin
