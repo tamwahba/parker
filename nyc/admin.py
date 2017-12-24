@@ -1,9 +1,9 @@
-from django.contrib import admin
+from django.contrib.gis import admin
 
 from .models import DateRange, ParkingRule
 
 
-class ParkingRuleAdmin(admin.ModelAdmin):
+class ParkingRuleAdmin(admin.OSMGeoAdmin):
     raw_id_fields = ('date_ranges', )
 
 
