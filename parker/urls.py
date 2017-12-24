@@ -20,10 +20,19 @@ from rest_framework import routers
 from nyc import views
 
 
+location_based = r'^api/v1/rules/'\
+    r'(?P<longitude>(\+|-)?[0-9]+(\.[0-9]*)?)/'\
+    r'(?P<latitude>(\+|-)?[0-9]+(\.[0-9]*)?)/'\
+    r'(?P<radius>[0-9]+(\.[0-9]*)?)'
+
+
 router = routers.DefaultRouter()
 router.register(r'rules', views.ParkingRuleViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/v1/', include(router.urls))
+    url(r'^api/v1/', include(router.urls)),
+    url(
+        location_based,
+        views.ParkingRuleByLocationViewSet.as_view({'get': 'list'}))
 ]
