@@ -89,9 +89,6 @@ class TimeLimit(ctypes.Structure):
 
 
 class Vehicle(ctypes.c_uint):
-    def __init__(self):
-        super(Vehicle, self).__init__()
-
     def __repr__(self):
         vehicle = 'trucks'
 
